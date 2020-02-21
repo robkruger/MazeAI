@@ -14,3 +14,5 @@ This mode shows every progression without a sleep between frames.
 
 ### QuickMode
 This mode is the quickest because it doesn't draw the learning fase. It should take less than a minute to learn a 30x30 maze
+
+![](AI.gif)
