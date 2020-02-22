@@ -3,7 +3,7 @@ from datetime import datetime
 
 from maze import Maze
 
-grid_size = (25, 25)
+grid_size = (30, 30)
 m = Maze(False, grid_size, None, None, (grid_size[0] - 1, grid_size[1] - 1))
 m.robot.x = 0
 m.robot.y = 0

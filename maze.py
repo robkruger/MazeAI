@@ -10,7 +10,7 @@ class Maze(object):
 
     def __init__(self, grad, grid_size, robot=None, c=None, s=None, wait=False):
         pygame.init()
-        self.screen = pygame.display.set_mode((600, 600))
+        self.screen = pygame.display.set_mode((1000, 1000))
         self.done = False
         self.w, self.h = pygame.display.get_surface().get_size()
         self.grid_size = grid_size
@@ -49,23 +49,23 @@ class Maze(object):
                 cell = Cell(False, True, x, 0)
                 self.cells[x].append(cell)
                 if self.gradually:
-                    time.sleep(0.04)
-                    self.parse_events()
+                    time.sleep(0.02)
+                    self.parse_events(True)
                     self.draw()
                 for y in range(1, self.grid_size[1]):
                     cell = Cell(True, True, x, y)
                     self.cells[x].append(cell)
                     if self.gradually:
-                        time.sleep(0.04)
-                        self.parse_events()
+                        time.sleep(0.02)
+                        self.parse_events(True)
                         self.draw()
 
             for y in range(self.grid_size[1]):
                 cell = Cell(True, False, self.grid_size[0] - 1, y)
                 self.cells[self.grid_size[0] - 1].append(cell)
                 if self.gradually:
-                    time.sleep(0.04)
-                    self.parse_events()
+                    time.sleep(0.02)
+                    self.parse_events(True)
                     self.draw()
 
             visited = [[False] * self.grid_size[0] + [True] for _ in range(self.grid_size[0])] + [
@@ -105,8 +105,8 @@ class Maze(object):
                         self.cells[i][j + 1].toggle_north()
 
                     if self.gradually:
-                        time.sleep(0.1)
-                        self.parse_events()
+                        time.sleep(0.02)
+                        self.parse_events(True)
                         self.draw()
 
                     walk(i + xx, j + yy)
