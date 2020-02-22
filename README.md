@@ -2,6 +2,10 @@
 
 Q-Learning algorithm which learns how to find its way to the star in a randomly generated maze.
 
+## How to run?
+
+Select one of the three modes, and the maze wil get generated. You can still edit the maze if you want by left-clicking on the cell you want to edit. Then right-click when you want to start the training. When the training is complete, right-click again and the robot will walk to the star.
+
 ## Modes
 
 There are 3 modes, FullMode, QuickDrawMode and QuickMode.
